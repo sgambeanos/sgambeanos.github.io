@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sgambeanos | Small-Batch Roasted Coffee, Roasted to Order</title>
+<meta name="description" content="Sgambeanos: small-batch roasted whole bean, single origin and specialty blends, roasted to order with whimsical custom labels. Life is too short to drink bad coffee.">
+<meta property="og:title" content="Sgambeanos | Good coffee, worth drinking and sharing">
+<meta property="og:description" content="Small-batch, roasted to order, with custom labels. Coffee should be fun.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --savoy:#4B61D1;
+  --savoy-deep:#2E3E96;
+  --azure:#E8ECFB;
+  --brown:#4A2C1A;
+  --brown-light:#7A4E32;
+  --cream:#FBF6EE;
+  --ink:#2A1A10;
+  --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.15;color:var(--brown)}
+a{color:var(--savoy-deep)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:72px 0}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(251,246,238,.94);backdrop-filter:blur(8px);border-bottom:1px solid #eadfce}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Fraunces",serif;font-weight:700;font-size:1.3rem;color:var(--brown);text-decoration:none}
+.brand svg{width:30px;height:30px}
+nav ul{display:flex;gap:22px;list-style:none}
+nav ul a{text-decoration:none;color:var(--brown);font-weight:500;font-size:.95rem}
+nav ul a:hover{color:var(--savoy)}
+@media(max-width:700px){nav ul li:not(:last-child){display:none}}
+
+/* hero */
+.hero{background:linear-gradient(160deg,var(--savoy) 0%,var(--savoy-deep) 100%);color:#fff;text-align:center;padding:96px 0 110px;position:relative;overflow:hidden}
+.hero h1{color:#fff;font-size:clamp(2.6rem,7vw,4.8rem);letter-spacing:-.02em}
+.hero h1 em{color:#F3D9B8;font-style:italic}
+.hero p.lead{max-width:640px;margin:22px auto 34px;font-size:1.2rem;color:#E6EAFB}
+.btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-brown{background:var(--brown);color:#fff}
+.btn-ghost{border:2px solid #fff;color:#fff;margin-left:10px}
+.hero .bean{position:absolute;opacity:.08;width:260px}
+.hero .b1{top:-40px;left:-60px;transform:rotate(25deg)}
+.hero .b2{bottom:-70px;right:-40px;transform:rotate(-30deg);width:340px}
+.stripe{height:10px;background:repeating-linear-gradient(90deg,var(--brown) 0 40px,var(--savoy) 40px 80px)}
+
+/* shared */
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;font-weight:700;color:var(--savoy);margin-bottom:10px}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:18px}
+.intro{max-width:700px;margin-bottom:38px;font-size:1.08rem}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:0 4px 18px rgba(74,44,26,.08);border-top:5px solid var(--savoy)}
+.card.brown{border-top-color:var(--brown)}
+.card h3{font-size:1.3rem;margin-bottom:8px}
+
+/* alt band */
+.band{background:var(--azure)}
+.dark-band{background:var(--brown);color:#F6E9D8}
+.dark-band h2{color:#fff}
+.dark-band .eyebrow{color:#F3D9B8}
+
+/* roast */
+.roasts{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.roast{border-radius:var(--radius);padding:26px;color:#fff}
+.roast h3{color:#fff;font-size:1.4rem}
+.roast.light{background:#B98A5E}
+.roast.med{background:#7A4E32}
+.roast.dark{background:#2B170C}
+
+/* moments */
+.moments{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.moment{background:#fff;border-radius:var(--radius);padding:24px;text-align:center;box-shadow:0 4px 14px rgba(74,44,26,.07)}
+.moment .icon{font-size:2.1rem;display:block;margin-bottom:8px}
+
+/* label */
+.label-demo{display:grid;gap:36px;grid-template-columns:1.1fr 1fr;align-items:center}
+@media(max-width:760px){.label-demo{grid-template-columns:1fr}}
+.bag{background:var(--cream);color:var(--brown);border:3px solid var(--brown);border-radius:12px;padding:30px 26px;text-align:center;max-width:320px;margin:0 auto;transform:rotate(-2deg);box-shadow:8px 8px 0 var(--savoy)}
+.bag small{letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--savoy-deep)}
+.bag .name{font-family:"Fraunces",serif;font-size:2rem;font-weight:700;margin:8px 0;color:var(--brown)}
+.bag .note{font-style:italic;margin-bottom:14px}
+.bag hr{border:0;border-top:2px dashed var(--brown-light);margin:14px 0}
+
+/* people */
+.people{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.pill{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:9px 20px;font-weight:700}
+
+/* contact */
+.contact{text-align:center}
+.contact .btn-savoy{background:var(--savoy);color:#fff;font-size:1.1rem}
+footer{background:var(--ink);color:#d9c9b6;text-align:center;padding:36px 22px;font-size:.92rem}
+footer strong{color:#fff}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="32" rx="20" ry="28" transform="rotate(30 32 32)" fill="#4A2C1A"/><path d="M22 8c8 14-6 20 4 30s0 14 8 20" transform="rotate(0 32 32)" stroke="#4B61D1" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+      Sgambeanos
+    </a>
+    <ul>
+      <li><a href="#coffee">Coffee</a></li>
+      <li><a href="#roast">Roast</a></li>
+      <li><a href="#labels">Labels</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#order">Order</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="bean b1" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="32" rx="20" ry="28" transform="rotate(30 32 32)" fill="#fff"/></svg>
+  <svg class="bean b2" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="32" rx="20" ry="28" transform="rotate(30 32 32)" fill="#fff"/></svg>
+  <div class="wrap">
+    <p class="eyebrow" style="color:#F3D9B8">Small-batch &middot; Roasted to order</p>
+    <h1>Good coffee,<br><em>worth drinking and sharing.</em></h1>
+    <p class="lead">Life is too short to drink bad coffee. Sgambeanos roasts whole bean coffee just for you, with a label that's just as fun as the cup.</p>
+    <a class="btn btn-brown" href="#order">Order your roast</a>
+    <a class="btn btn-ghost" href="#story">Our story</a>
+  </div>
+</header>
+<div class="stripe"></div>
+
+<section id="coffee">
+  <div class="wrap">
+    <p class="eyebrow">What we roast</p>
+    <h2>Whole bean, roasted in small batches</h2>
+    <p class="intro">Every order is roasted fresh, never pulled from a warehouse shelf. Pick what suits your morning, your mug, or your mood.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Single Origin</h3>
+        <p>One place, one harvest, one story in the cup. We source from quality importers who support indigenous coffee growers around the world.</p>
+      </div>
+      <div class="card brown">
+        <h3>Specialty Blends</h3>
+        <p>Blends we build with care, balancing sweetness, body and brightness so they taste great from the first cup to the last.</p>
+      </div>
+      <div class="card">
+        <h3>Decaf Done Right</h3>
+        <p>Great decaf shouldn't feel like a consolation prize. Ours is roasted with the same care as everything else, so you don't feel like you're missing out.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="roast">
+  <div class="wrap">
+    <p class="eyebrow">Your roast, your rules</p>
+    <h2>Light, medium, or dark</h2>
+    <p class="intro">Tell us how you like it and we'll roast to your preference. Caffeinated or decaf, every style is on the menu. We've got caffeine minds covered, and decaf minds too.</p>
+    <div class="roasts">
+      <div class="roast light"><h3>Light</h3><p>Bright, fruity, floral. The origin gets to do the talking.</p></div>
+      <div class="roast med"><h3>Medium</h3><p>Balanced and sweet, with caramel and chocolate notes. The crowd pleaser.</p></div>
+      <div class="roast dark"><h3>Dark</h3><p>Bold, rich and toasty, with a deep, roasty finish.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="labels">
+  <div class="wrap label-demo">
+    <div>
+      <p class="eyebrow">Made for you</p>
+      <h2>Whimsical, personalized labels</h2>
+      <p style="margin-bottom:14px">Every bag gets a label with some personality. Name it after your cabin, your café, your best friend, or your terrible dog. Giving a gift? Put a joke on it. Hosting an event? Make it a party favor.</p>
+      <p style="margin-bottom:14px">Each label also tells the coffee's story: the roast date, the origin, and the elevation it was grown at, when we have it.</p>
+      <p>Coffee should be fun, and a bag with your name on it is more fun than a plain one.</p>
+    </div>
+    <div class="bag" aria-label="Example custom coffee bag label">
+      <small>Sgambeanos &middot; Roasted to order</small>
+      <div class="name">Left Hander's Lament</div>
+      <p class="note">"Everything's backwards except the coffee."</p>
+      <hr>
+      <p><strong>Origin:</strong> Ethiopia, Yirgacheffe<br>
+      <strong>Elevation:</strong> 1,900 m<br>
+      <strong>Roast:</strong> Medium<br>
+      <strong>Roasted on:</strong> Nov 10, 2026</p>
+      <hr>
+      <p style="font-size:.85rem">Sample label. Yours will carry your own name and message.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">Anytime, anywhere</p>
+    <h2>Coffee for every kind of day</h2>
+    <div class="moments">
+      <div class="moment"><span class="icon">&#9728;&#65039;</span><strong>First thing in the morning</strong><p>Before the inbox, before the world.</p></div>
+      <div class="moment"><span class="icon">&#127958;&#65039;</span><strong>After a day at the beach</strong><p>Salty hair, sandy feet, warm mug.</p></div>
+      <div class="moment"><span class="icon">&#127794;</span><strong>After a day in the woods</strong><p>Campfire optional, coffee required.</p></div>
+      <div class="moment"><span class="icon">&#127751;</span><strong>After a day in the city</strong><p>Where the day finally slows down.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark-band" id="story">
+  <div class="wrap">
+    <p class="eyebrow">Our story</p>
+    <h2>Roots in Italy, roasted with love</h2>
+    <p class="intro">We trace our roots to the Italian peninsula, where coffee is a national pastime and gathering around food and drink is as natural as breathing. That spirit is baked into every roast.</p>
+    <p class="intro">We're engineers, and we love the science of coffee from root and stem to bean and roast. We take our roasting very seriously. We just don't take ourselves too seriously.</p>
+    <p class="intro" style="margin-bottom:0">Coffee is about people, and we bring them together over a good roast prepared with love:</p>
+    <div class="people">
+      <span class="pill">Farmers</span>
+      <span class="pill">Roasters</span>
+      <span class="pill">Baristas</span>
+      <span class="pill">Imbibers</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="order">
+  <div class="wrap">
+    <p class="eyebrow">Let's roast something</p>
+    <h2>Ready for a cup worth sharing?</h2>
+    <p class="intro" style="margin:0 auto 28px">Tell us your roast level, caffeinated or decaf, and what you'd like on your label. We'll take it from there.</p>
+    <a class="btn btn-savoy" href="mailto:hello@sgambeanos.com?subject=Coffee%20order&body=Roast%20level%3A%0ACaffeinated%20or%20decaf%3A%0ASingle%20origin%20or%20blend%3A%0ALabel%20name%20or%20message%3A">Email us your order</a>
+  </div>
+</section>
+
+<footer>
+  <p><strong>Sgambeanos</strong> &middot; Small-batch roasted whole bean coffee</p>
+  <p>Life is too short to drink bad coffee.</p>
+  <p style="margin-top:10px">&copy; <span id="yr">2026</span> Sgambeanos. All rights reserved.</p>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
